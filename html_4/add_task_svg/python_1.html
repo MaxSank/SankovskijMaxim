@@ -1,0 +1,89 @@
+<!DOCTYPE html>  
+<HTML> 
+	<HEAD>
+		<META charset="utf-8">
+		<TITLE>HOW-TO: Программа на Python, Часть 1</TITLE>
+		<style>
+			.fig {
+    text-align: center; <!-- Выравнивание по центру -->
+   }
+		</style>
+	</HEAD>  
+		
+	<BODY>
+	
+		<p><img src="img/Icon-Python.png" alt="Логотип Python" title="Логотип Python" align="right"></p>
+		<h1>HOW-TO: Программа на Python, Часть 1</h1>
+		<ul>
+			<li> <a href="python_1.html">Программа на Python — часть 1</a></li>
+			<li> <a href="python_2.html">Программа на Python — часть 2</a></li>
+			<li> <a href="python_3.html">Программа на Python — часть 3</a></li>
+		</ul>
+		<h2 id="to_table">Содержание</h2>
+		<h3>HOW-TO: Программа на Python, Часть 1</h3>
+		<ul>
+			<li> <a href="#chapter1">Наша первая программа</a></li>
+			<li> <a href="#chapter2">Пример цикла For</a></li>
+		</ul>
+		<p>Из множества существующих языков программирования Python — один из самых лёгких
+		в изучении. Он создан в конце 80-х годов XX века, но с тех пор он сильно изменился.
+		Хотя Python входит в состав большинства дистрибутивов Linux, на него часто не
+		обращают внимания при выборе языка для изучения. В этой статье мы рассмотрим
+		создание консольных приложений, а в следующей — программирование графических
+		интерфейсов (<abbr title="англ. graphical user interface, графический интерфейс пользователя">GUI</abbr>). Давайте создадим простую программу прямо сейчас.</p>
+		
+		<h2 id="chapter1">Наша первая программа</h2>
+		
+		<a href="#to_table">К содержанию</a>
+
+		<p>Наберём код в текстовом редакторе (например, в <b>gedit</b>). Потом мы разберёмся, что делает
+		каждая строка и пойдём дальше.</p>
+		<p>Введите эти 4 строки:</p>
+		<pre>
+#!/usr/bin/env python
+print 'Hello. I am a python program.'
+name = raw_input("What is your name?")
+print "Hello there, " + name + "!"
+		</pre>
+		<p>Это всё. Сохраните файл как <b>hello.py</b> в любом месте. Я предлагаю сохранить его в папке
+		<b>python_examples</b> в домашнем каталоге. Этот пример показывает, как просто написать
+		программу на Python. Для запуска программы нужно сделать её файл исполняемым. Для
+		этого введите в терминале</p>
+		<pre>
+<b>chmod +x hello.py</b>
+		</pre>
+		<p>в папке, в которой вы сохранили программу. Теперь запустите её.</p>
+		<pre>
+greg@earth:~/python_examples$ ./hello.py
+Hello. I am a python program.
+What is your name? Ferd Burphel
+Hello there, Ferd Burphel!
+greg@earth:~/python_examples$
+		</pre>
+		<p>Вот и всё.<p>
+
+		<h2 id="chapter2">Пример цикла For</h2>
+		
+		<a href="#to_table">К содержанию</a>
+
+		<p>Теперь давайте рассмотрим пример программирования цикла. Запустите текстовый
+		редактор и наберите следующую программу:</p>
+		<pre>
+#!/usr/bin/env python
+for cntr in range(0,10):
+	print cntr
+		</pre>
+		<p><i>Не забудьте поставить символ табуляции перед строкой «print cntr»</i>. Это важно. В
+		Python для указания на блоки кода используются не круглые «<b>(</b>» и фигурные «<b>{</b>» скобки
+		как в других языках программирования, а отступы.</p>
+	
+	<hr>
+	
+	<p class="fig">
+	<a href=""><img src="data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='arrow-left' class='svg-inline--fa fa-arrow-left fa-w-14' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='currentColor' d='M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z'%3E%3C/path%3E%3C/svg%3E" alt="Назад" title="Вы на первой странице" align="left" width="22">
+	<a href="#to_table"><img src="data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='home' class='svg-inline--fa fa-home fa-w-18' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'%3E%3Cpath fill='currentColor' d='M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z'%3E%3C/path%3E%3C/svg%3E" alt="Домой" title="К содержанию страницы" align="top" width="22">
+	<a href="python_2.html"><img src="data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='arrow-right' class='svg-inline--fa fa-arrow-right fa-w-14' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='currentColor' d='M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z'%3E%3C/path%3E%3C/svg%3E" alt="Вперёд" title="Перейти к HOW-TO: Программа на Python, Часть 2" align="right" align="top" width="22">
+	</p>
+	
+	</BODY>  
+</HTML> ​
